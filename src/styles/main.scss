@@ -60,3 +60,15 @@ button:hover {
   text-align: center;
   margin: 30px;
 }
+
+@media only screen and (max-width: 769px) {
+  form {
+    background-color: white;
+    width: 25rem;
+    margin: auto;
+    font-family: 'Cutive Mono', monospace;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+}
