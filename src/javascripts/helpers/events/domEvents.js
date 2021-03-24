@@ -1,4 +1,5 @@
 import artistInfo from '../../components/artistInfo';
+import enterText from '../../components/noData';
 import printLyrics from '../../components/printLyrics';
 import getLyrics from '../getLyrics';
 
@@ -9,7 +10,11 @@ const domEvents = () => {
       const artist = document.querySelector('#artist').value;
       const title = document.querySelector('#title').value;
       getLyrics(artist, title).then((response) => printLyrics(response));
-      artistInfo(artist.toUpperCase(), title.toUpperCase());
+      if (artist && title) {
+        artistInfo(artist.toUpperCase(), title.toUpperCase());
+      } else {
+        enterText();
+      }
     }
   });
 };
